@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&family=IBM+Plex+Mono&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter&Roboto&family=Ubuntu&family=IBM+Plex+Mono&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 @import url('../css/sidebar.css');
 
 :root {
-	--ubuntu: 'Ubuntu', sans-serif;
-	--roboto: 'Roboto', sans-serif;
+	--ubuntu: 'Inter', 'Ubuntu', sans-serif;
+	--roboto: 'Inter', 'Roboto', sans-serif;
 	--ibm-mono: 'IBM Plex Mono', monospace;
 
 	--inactive-icon: #BDBDBD;
@@ -166,7 +166,7 @@ a {
 	height: 35px;
 	outline: none;
 	border: 2px solid transparent;
-	border-radius: 0px 3px 3px 0px;	
+	border-radius: 0px 3px 3px 0px;
 	cursor: pointer;
 	transition: .3s;
 }

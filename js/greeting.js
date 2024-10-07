@@ -39,5 +39,5 @@ function setGreeting(greetingName) {
 	} else if (hour >= 12 && hour < 17) {
 		timeOfTheDay = "afternoon";
 	}
-	greeting.innerHTML `Good ${timeOfTheDay},${greetingName}`;
+	greeting.innerHTML = `Good ${timeOfTheDay}, ${greetingName}`;
 }

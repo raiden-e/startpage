@@ -61,7 +61,7 @@ apply.onclick = () => {
 }
 
 function getWeatherInfo(key, city) {
-	fetch(`https://api.openweathermap.org/data/3/weather?q=${city}&appid=${key}`)
+	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
 		.then(function (response) {
 			return response.json();
 		})
