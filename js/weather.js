@@ -92,20 +92,34 @@ function getWeatherInfo(key, city) {
 }
 
 function drawWeather() {
-	if (weatherLS) {
-		if (JSON.parse(weatherLS).tempUnit === 'C') {
-			temp = `${celsius}\u00B0C`;
-			radioCelsius.checked = true;
-		} else {
-			temp = `${fahrenheit}\u00B0F`;
-			radioFahrenheit.checked = true;
-		}
-	}
+    let iconMap = {
+        'clear sky': 'fa-sun',
+        'few clouds': 'fa-cloud-sun',
+        'scattered clouds': 'fa-cloud',
+        'broken clouds': 'fa-cloud',
+        'shower rain': 'fa-cloud-showers-heavy',
+        'rain': 'fa-cloud-rain',
+        'thunderstorm': 'fa-bolt',
+        'snow': 'fa-snowflake',
+        'mist': 'fa-smog'
+    };
 
-	if (!weatherLS) {
-		temp = `${celsius}\u00B0C`;
-		radioCelsius.checked = true;
-	}
+    let iconClass = iconMap[description] || 'fa-cloud';
 
-	info.innerHTML = `${description}, <span class="header__weather-temp">${temp}</span>`;
+    if (weatherLS) {
+        if (JSON.parse(weatherLS).tempUnit === 'C') {
+            temp = `${celsius}\u00B0C`;
+            radioCelsius.checked = true;
+        } else {
+            temp = `${fahrenheit}\u00B0F`;
+            radioFahrenheit.checked = true;
+        }
+    }
+
+    if (!weatherLS) {
+        temp = `${celsius}\u00B0C`;
+        radioCelsius.checked = true;
+    }
+
+    info.innerHTML = `${description}, <span class="header__weather-temp">${temp} <i class="fa-solid ${iconClass}"></i></span>`;
 }
