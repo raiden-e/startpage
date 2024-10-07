@@ -2,12 +2,6 @@ let greeting = document.querySelector('.header__greeting');
 let buttonApplyName = document.getElementById('name_apply');
 let nameInput = document.getElementById('greeting_name');
 
-// Greetings
-const night = 'Good night';
-const morning = 'Good morning';
-const afternoon = 'Good afternoon';
-const evening = 'Good evening';
-
 // Name
 if (localStorage.getItem('name') !== null) {
 	let name = localStorage.getItem('name');
@@ -15,7 +9,7 @@ if (localStorage.getItem('name') !== null) {
 	setGreeting(greetingName);
 	nameInput.placeholder = name;
 } else {
-	let name = 'Anon';
+	let name = 'Raiden';
 	let greetingName = `<span class="header__greeting-name">${name}</span>.`
 	setGreeting(greetingName);
 	nameInput.placeholder = name;
@@ -37,14 +31,13 @@ buttonApplyName.onclick = () => {
 // Hours of the greetings
 function setGreeting(greetingName) {
 	let hour = new Date().getHours();
-
+	let timeOfTheDay = "evening";
 	if (hour >= 23 || hour < 6) {
-		greeting.innerHTML = `${night}, ${greetingName}`;
+		timeOfTheDay = "night";
 	} else if (hour >= 6 && hour < 12) {
-		greeting.innerHTML = `${morning}, ${greetingName}`;
+		timeOfTheDay = "morning";
 	} else if (hour >= 12 && hour < 17) {
-		greeting.innerHTML = `${afternoon}, ${greetingName}`;
-	} else {
-		greeting.innerHTML = `${evening}, ${greetingName}`;
+		timeOfTheDay = "afternoon";
 	}
+	greeting.innerHTML `Good ${timeOfTheDay},${greetingName}`;
 }

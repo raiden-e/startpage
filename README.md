@@ -1,4 +1,4 @@
-![Preview](https://github.com/sadparadiseinhell/null/blob/main/assets/preview.png)
+![Preview](assets/preview.png)
 
 ## Features
 - **Dark/Light Theme** changes by pressing the :waning_crescent_moon: button. In the settings you can set your own colors for both themes
