@@ -99,7 +99,7 @@ function drawWeather() {
         'broken clouds': 'fa-cloud',
         'shower rain': 'fa-cloud-showers-heavy',
         'rain': 'fa-cloud-rain',
-        'thunderstorm': 'fa-bolt',
+        'thunderstorm': 'fa-cloud-bolt',
         'snow': 'fa-snowflake',
         'mist': 'fa-smog'
     };
