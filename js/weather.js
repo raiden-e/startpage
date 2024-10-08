@@ -105,6 +105,7 @@ function drawWeather() {
     };
 
     let iconClass = iconMap[description] || 'fa-cloud';
+	console.log(`${description} ${iconClass}`);
 
     if (weatherLS) {
         if (JSON.parse(weatherLS).tempUnit === 'C') {
