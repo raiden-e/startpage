@@ -69,6 +69,7 @@ function getWeatherInfo(key, city) {
 			celsius = Math.round(parseFloat(data.main.temp) - 273.15);
 			fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
 			description = data.weather[0].description;
+			main = data.weather[0].main
 		})
 		.then(function () {
 			drawWeather();
@@ -99,13 +100,12 @@ function drawWeather() {
         'broken clouds': 'fa-cloud',
         'shower rain': 'fa-cloud-showers-heavy',
         'rain': 'fa-cloud-rain',
-	'light rain': 'fa-cloud-rain',
         'thunderstorm': 'fa-cloud-bolt',
         'snow': 'fa-snowflake',
         'mist': 'fa-smog'
     };
 
-    let iconClass = iconMap[description] || 'fa-cloud';
+    let iconClass = iconMap[main] || 'fa-meteor';
 	console.log(`${description} ${iconClass}`);
 
     if (weatherLS) {
