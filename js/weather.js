@@ -107,6 +107,7 @@ function drawWeather() {
 
 	let iconClass = iconMap[main] || 'fa-meteor';
 	console.log(`${description} ${iconClass}`);
+	console.log(`${main} ${iconClass}`);
 
 	if (weatherLS && JSON.parse(weatherLS).tempUnit !== 'C') {
 		temp = `${fahrenheit}\u00B0F`;
