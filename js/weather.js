@@ -105,7 +105,7 @@ function drawWeather() {
 		'mist': 'fa-smog'
 	};
 
-	let iconClass = iconMap[main] || 'fa-meteor';
+	let iconClass = iconMap[main.toLowerCase()] || 'fa-meteor';
 	console.log(`${description} ${iconClass}`);
 	console.log(`${main} ${iconClass}`);
 
