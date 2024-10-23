@@ -94,7 +94,7 @@ function getWeatherInfo(key, city) {
 
 function drawWeather() {
 	let iconMap = {
-		'clear sky': 'fa-sun',
+		'clear': 'fa-sun',
 		'clouds': 'fa-cloud',
 		'few clouds': 'fa-cloud-sun',
 		'scattered clouds': 'fa-cloud',
